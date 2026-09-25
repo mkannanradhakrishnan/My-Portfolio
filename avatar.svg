@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" role="img" aria-labelledby="title desc">
+  <title id="title">Kannan Radhakrishnan avatar</title>
+  <desc id="desc">A colorful illustrated avatar placeholder for Kannan Radhakrishnan.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f7fff"/>
+      <stop offset="0.55" stop-color="#9b6bff"/>
+      <stop offset="1" stop-color="#ec5bb4"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17264f"/>
+      <stop offset="1" stop-color="#0d1022"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="720" rx="48" fill="url(#bg)"/>
+  <circle cx="520" cy="120" r="130" fill="#ffffff" opacity=".12"/>
+  <circle cx="90" cy="610" r="180" fill="#2fd7d0" opacity=".14"/>
+  <path d="M116 720c20-164 104-246 204-246s184 82 204 246z" fill="url(#shirt)"/>
+  <path d="M214 455c14 36 56 66 106 66s92-30 106-66v-84H214z" fill="#d08c72"/>
+  <path d="M190 248c0-104 75-168 130-168 76 0 132 60 132 168v113c0 83-59 150-132 150s-130-67-130-150z" fill="#d99a7a"/>
+  <path d="M184 265c-15-126 61-208 153-208 91 0 142 70 132 185-37-10-58-37-76-76-51 60-123 83-209 99z" fill="#17152d"/>
+  <path d="M220 292c19-12 42-12 61 0M360 292c19-12 42-12 61 0" fill="none" stroke="#17152d" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="253" cy="326" r="9" fill="#17152d"/><circle cx="387" cy="326" r="9" fill="#17152d"/>
+  <path d="M283 394c26 20 49 20 75 0" fill="none" stroke="#8b4c53" stroke-width="9" stroke-linecap="round"/>
+  <path d="M243 552l77 83 77-83 30 168H213z" fill="#eef0f6" opacity=".95"/>
+  <text x="320" y="675" text-anchor="middle" fill="#4f7fff" font-family="Arial,sans-serif" font-size="34" font-weight="700">KRM</text>
+</svg>
