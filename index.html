@@ -15,6 +15,20 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="page-loader" class="page-loader" aria-hidden="true">
+	<div class="loader-content">
+		<div class="loader-logo">
+			<span class="loader-monogram">KRM</span>
+			<div class="loader-ring"></div>
+		</div>
+		<div class="loader-bar-wrap">
+			<div class="loader-bar"></div>
+		</div>
+		<div class="loader-text"><span class="loader-cursor">INITIALIZING PORTFOLIO...</span></div>
+	</div>
+</div>
+<div id="scroll-progress"></div>
+<div id="cursor-glow"></div>
 <div class="grain"></div>
 <div class="bg-fx" aria-hidden="true">
 	<div class="orb orb-1"></div>
@@ -31,22 +45,48 @@
 			<li><a href="#skills">Skills</a></li>
 			<li><a href="#projects">Projects</a></li>
 			<li><a href="#contact">Contact</a></li>
+			<li><a href="https://github.com/mkannanradhakrishnan" target="_blank" rel="noreferrer">GitHub</a></li>
 		</ul>
 		<a class="nav-cta" href="tel:+919342709599">Call me</a>
+		<button class="burger" aria-label="Toggle navigation menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 	</nav>
 </header>
+
+<div class="mobile-menu" aria-hidden="true">
+	<a href="#about">About</a>
+	<a href="#skills">Skills</a>
+	<a href="#projects">Projects</a>
+	<a href="#contact">Contact</a>
+	<a href="https://github.com/mkannanradhakrishnan" target="_blank" rel="noreferrer">GitHub</a>
+	<a class="btn btn-primary" href="tel:+919342709599">Call me</a>
+</div>
 
 <main id="top">
 	<section class="hero">
 		<div class="wrap hero-grid">
 			<div class="hero-copy">
-				<div class="eyebrow"><span class="dot"></span> CSE STUDENT · FULL STACK DEVELOPER</div>
+				<div class="eyebrow"><span class="dot"></span> <span class="typewriter-text" data-text="CSE STUDENT · FULL STACK DEVELOPER">CSE STUDENT · FULL STACK DEVELOPER</span></div>
 				<h1 class="hero-name"><span class="line">Kannan</span><span class="line grad">Radhakrishnan</span></h1>
 				<div class="role-line"><span id="typed-role">Building useful digital experiences</span><span class="cursor-bar"></span></div>
 				<p class="hero-intro">I explore full-stack development and AI-powered products, turning thoughtful ideas into clean, practical web experiences.</p>
 				<div class="btn-row">
 					<a class="btn btn-primary" href="#projects">View my work</a>
 					<a class="btn btn-ghost" href="mailto:mradhakrishnan360@gmail.com">Get in touch</a>
+					<a class="btn btn-ghost" href="https://github.com/mkannanradhakrishnan" target="_blank" rel="noreferrer" aria-label="GitHub Profile">
+						<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:5px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+						GitHub
+					</a>
+				</div>
+				<div class="hero-stats">
+					<div class="h-stat"><span class="stat-num grad">B.E. CSE</span><span class="stat-lbl">Student Developer</span></div>
+					<div class="h-stat-div"></div>
+					<div class="h-stat"><span class="stat-num grad">Full Stack</span><span class="stat-lbl">&amp; AI Exploration</span></div>
+					<div class="h-stat-div"></div>
+					<div class="h-stat"><span class="stat-num grad">Live</span><span class="stat-lbl">Storefront Built</span></div>
 				</div>
 			</div>
 			<div class="portrait-wrap" aria-label="Kannan Radhakrishnan">
@@ -95,12 +135,123 @@
 
 	<section id="projects" class="reveal">
 		<div class="wrap">
-			<div class="sec-head"><span class="sec-label">03 / PROJECTS</span><h2 class="sec-title">A small selection of things I am building.</h2></div>
-			<article class="project-card">
-				<div class="browser-bar"><span></span><span></span><span></span><div class="browser-url">sri-krishna-textiles-psk-mu.vercel.app</div></div>
-				<div class="project-preview"><div class="preview-mark">Sri Krishna Textiles</div></div>
-				<div class="project-body"><div class="tag-row"><span class="tag">E-commerce</span><span class="tag">Frontend</span><span class="tag">Responsive</span></div><h3>Fashion storefront website</h3><p class="desc">A live online shopping website built for a textiles and fashion brand, featuring a polished storefront and responsive product browsing experience.</p><div class="project-actions"><a class="btn btn-primary" href="https://sri-krishna-textiles-psk-mu.vercel.app/" target="_blank" rel="noreferrer">View project</a></div></div>
-			</article>
+			<div class="sec-head">
+				<span class="sec-label">03 / PROJECTS</span>
+				<h2 class="sec-title">Featured work &amp; technical builds.</h2>
+				<p class="sec-sub">Real-world production storefronts and intelligent web applications built with modern stacks.</p>
+			</div>
+
+			<div class="projects-grid">
+				<!-- Project 1: Sri Krishna Textiles -->
+				<article class="project-card">
+					<div class="browser-bar">
+						<span></span><span></span><span></span>
+						<div class="browser-url">sri-krishna-textiles-psk-mu.vercel.app</div>
+						<div class="project-status"><span class="status-dot-live"></span> Live Production</div>
+					</div>
+					<div class="project-preview preview-skt">
+						<div class="preview-overlay"></div>
+						<div class="preview-mark">Sri Krishna Textiles</div>
+						<span class="preview-badge">Fashion E-Commerce</span>
+					</div>
+					<div class="project-body">
+						<div class="tech-stack-group">
+							<div class="tech-group">
+								<span class="tech-label">LANGUAGES:</span>
+								<div class="tag-row">
+									<span class="tag tag-lang">HTML5</span>
+									<span class="tag tag-lang">CSS3</span>
+									<span class="tag tag-lang">JavaScript (ES6+)</span>
+								</div>
+							</div>
+							<div class="tech-group">
+								<span class="tech-label">TECHNOLOGIES &amp; TOOLS:</span>
+								<div class="tag-row">
+									<span class="tag tag-tech">CSS Grid &amp; Flexbox</span>
+									<span class="tag tag-tech">Responsive Design</span>
+									<span class="tag tag-tool">Vercel Deployment</span>
+									<span class="tag tag-tool">Git &amp; GitHub</span>
+								</div>
+							</div>
+						</div>
+
+						<h3>Fashion Storefront Website</h3>
+						<p class="desc">A high-performance online shopping storefront engineered for a textiles and fashion brand. Features mobile-first responsive browsing, structured product catalogs, fluid navigation, and fast asset delivery.</p>
+
+						<ul class="project-features">
+							<li><span class="pf-icon">✦</span> Fast, zero-bloat vanilla architecture optimized for low-latency loading</li>
+							<li><span class="pf-icon">✦</span> Mobile-first touch responsive layout with smooth drawer navigation</li>
+							<li><span class="pf-icon">✦</span> Production deployment with continuous integration on Vercel</li>
+						</ul>
+
+						<div class="project-actions">
+							<a class="btn btn-primary" href="https://sri-krishna-textiles-psk-mu.vercel.app/" target="_blank" rel="noreferrer">
+								🚀 Visit Live Storefront
+							</a>
+							<a class="btn btn-ghost" href="https://github.com/mkannanradhakrishnan" target="_blank" rel="noreferrer">
+								🐙 View on GitHub
+							</a>
+							<button type="button" class="btn btn-ghost btn-ask-ai" data-ask-project="Sri Krishna Textiles">
+								💬 Ask AI About This
+							</button>
+						</div>
+					</div>
+				</article>
+
+				<!-- Project 2: KRM AI Portfolio & Intelligent Assistant -->
+				<article class="project-card">
+					<div class="browser-bar">
+						<span></span><span></span><span></span>
+						<div class="browser-url">kannan-portfolio.dev</div>
+						<div class="project-status"><span class="status-dot-live pulse-blue"></span> Active Interactive</div>
+					</div>
+					<div class="project-preview preview-ai">
+						<div class="preview-overlay"></div>
+						<div class="preview-mark">KRM AI Assistant</div>
+						<span class="preview-badge">AI &amp; Interactive Web</span>
+					</div>
+					<div class="project-body">
+						<div class="tech-stack-group">
+							<div class="tech-group">
+								<span class="tech-label">LANGUAGES:</span>
+								<div class="tag-row">
+									<span class="tag tag-lang">JavaScript (ES6+)</span>
+									<span class="tag tag-lang">HTML5</span>
+									<span class="tag tag-lang">CSS3</span>
+								</div>
+							</div>
+							<div class="tech-group">
+								<span class="tech-label">TECHNOLOGIES &amp; TOOLS:</span>
+								<div class="tag-row">
+									<span class="tag tag-tech">Web Audio API</span>
+									<span class="tag tag-tech">Google Gemini API</span>
+									<span class="tag tag-tech">3D CSS Perspective</span>
+									<span class="tag tag-tech">Glassmorphism</span>
+									<span class="tag tag-tool">Local NLP Engine</span>
+								</div>
+							</div>
+						</div>
+
+						<h3>Interactive Portfolio &amp; AI Assistant</h3>
+						<p class="desc">A cyberpunk glassmorphic portfolio featuring an intelligent dual-engine chat assistant, native Web Audio API sound synthesis, 3D mouse-tracking card physics, dynamic glare reflection, and smooth ambient lighting.</p>
+
+						<ul class="project-features">
+							<li><span class="pf-icon">✦</span> Standalone conversational AI with instant intent matching and section navigation</li>
+							<li><span class="pf-icon">✦</span> Zero-dependency Web Audio API synthesizer for sound effects with persistence</li>
+							<li><span class="pf-icon">✦</span> Hardware-accelerated 3D card tilt and cursor glow interpolation</li>
+						</ul>
+
+						<div class="project-actions">
+							<button type="button" class="btn btn-primary btn-trigger-chat">
+								⚡ Launch AI Assistant
+							</button>
+							<a class="btn btn-ghost" href="https://github.com/mkannanradhakrishnan" target="_blank" rel="noreferrer">
+								🐙 View on GitHub
+							</a>
+						</div>
+					</div>
+				</article>
+			</div>
 		</div>
 	</section>
 
@@ -109,7 +260,8 @@
 	</section>
 </main>
 
-<footer id="contact"><div class="wrap"><p>Let's build something useful together.</p><div class="btn-row"><a class="btn btn-ghost" href="tel:+919342709599">9342709599</a><a class="btn btn-ghost" href="mailto:mradhakrishnan360@gmail.com">mradhakrishnan360@gmail.com</a></div></div></footer>
+<footer id="contact"><div class="wrap"><p>Let's build something useful together.</p><div class="btn-row"><a class="btn btn-ghost" href="tel:+919342709599">9342709599</a><a class="btn btn-ghost" href="mailto:mradhakrishnan360@gmail.com">mradhakrishnan360@gmail.com</a><a class="btn btn-ghost" href="https://github.com/mkannanradhakrishnan" target="_blank" rel="noreferrer"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:5px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a></div></div></footer>
 <script src="script.js"></script>
+<script src="chatbot.js"></script>
 </body>
 </html>
